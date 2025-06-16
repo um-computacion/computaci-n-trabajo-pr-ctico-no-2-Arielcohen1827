@@ -4,6 +4,46 @@
 ## Identificación del Alumno
 **Nombre y Apellido:** Ariel Cohen
 
+## Cómo ejecutar el sistema
+
+### Ejecutar la aplicación
+python -m src.main
+### Ejecutar los Test aplicación
+python -m unittest discover -s Test -p "test_*.py"
+## Explicación de diseño general
+Arquitectura
+El sistema implementa una arquitectura en capas con separación clara de responsabilidades:
+
+Modelos (src/models/): Contiene las clases y las validaciones.
+
+Interfaz por consola (src/cli.py): Maneja la interacción con el usuario.
+
+Excepciones (src/exceptions.py): Manejo de excepciones personalizadas.
+
+Pruebas (tests/): Contiene los tests automatizados.
+
+Características técnicas
+Validaciones centralizadas en los modelos para mantener el CLI limpio.
+
+Excepciones personalizadas para distintos tipos de errores.
+
+Búsquedas optimizadas usando diccionarios, manejándose con DNI o Matrícula.
+
+Copias de listas para evitar sobreescritura o eliminación accidental de datos importantes.
+
+Historia clínica automática al registrar pacientes.
+
+Flujo de operaciones
+El CLI solicita datos al usuario.
+
+Se crean objetos del modelo con validaciones automáticas.
+
+La clase Clinica coordina las operaciones del sistema.
+
+Se manejan errores mediante excepciones específicas.
+
+El CLI muestra resultados o mensajes de error.
+
 **Nota:** Este trabajo práctico es de carácter individual. Cada alumno debe realizar su propia implementación y no se permite el trabajo en grupo.
 
 ## Objetivo
